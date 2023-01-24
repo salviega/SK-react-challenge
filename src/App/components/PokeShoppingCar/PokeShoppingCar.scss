@@ -1,0 +1,11 @@
+.shopping-car {
+	margin-bottom: 1.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__button {
+		position: absolute;
+		right: 5%;
+	}
+}

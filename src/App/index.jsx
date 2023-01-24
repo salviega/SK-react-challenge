@@ -7,9 +7,10 @@ import { setLoading } from '../store/actions/uiAction'
 import { PokeShopList } from './components/PokeShopList'
 import { PokeShopSearcher } from './components/PokeShopSearcher'
 import './App.scss'
+import logo from '../assets/images/pokeshop.png'
 
 function App() {
-	const pokemons = useSelector(state => state.pokemons.pokemons)
+	const pokemons = useSelector(state => state.pokemons.pokemonsFound)
 	const loading = useSelector(state => state.ui.loading)
 	const dispatch = useDispatch()
 
@@ -27,9 +28,9 @@ function App() {
 	return (
 		<div className='app'>
 			<Col span={4} offset={10}>
-				<img src={''} alt='PokeShop' />
+				<img src={logo} alt='PokeShop' />
 			</Col>
-			<Col span={8} offset={8}>
+			<Col span={12} offset={9}>
 				<PokeShopSearcher />
 			</Col>
 			{loading ? (
